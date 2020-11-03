@@ -1,0 +1,9 @@
+﻿ID, Superior     ,Pessoa                     , Cargo                                 , Sigla
+1 ,     0        ,Felipe Memolo Portela      , Presidente                            , PRES
+2 ,     1        ,Marina Brito Batiilani     , Diretora de Conhecimento e Tecnologia , DCT
+3 ,     1        ,Francisco Filho            , Diretor de Administração e Finanças   , DAF
+4 ,     1        ,Erica                      , Diretora de Pesquisa Aplicada         , DPA
+5 ,     2        ,Diego Ricardi dos Anjos    , Chefe de Serviço                      , STIC
+6 ,     2        ,Fernando Timoteo Fernandes , Chefe de Serviço                      , STDN
+7 ,     3        ,Carlos Alberto de França   , Coordenador                           , COF
+8 ,     4        ,Guilherme                  , Gerente                               , GPE
