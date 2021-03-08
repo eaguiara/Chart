@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
-  <meta charset="UTF-8">
-    <style>
-        .titulo{
-            color:red ;
-            font-style: italic;
-            font-weight:border;
-               }
-    </style>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <div id="chart_div"></div>
-    <script>
-      google.charts.load('current', { packages: ["orgchart"] });
-      google.charts.setOnLoadCallback(drawChart);
+  <meta charset="UTF-8" />
+  <style>
+    .titulo {
+      color: red;
+      font-style: italic;
+      font-weight: border;
+    }
+  </style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="chart_div"></div>
+  <script>
+    google.charts.load('current', { packages: ['orgchart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Pessoa');
-        data.addColumn('string', 'Cargo');
-        data.addColumn('string', 'Sigla');
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Pessoa');
+      data.addColumn('string', 'Cargo');
+      data.addColumn('string', 'Sigla');
 
+      data.addRows(orgonograma_dados);
 
-        data.addRows(orgonograma_dados);
+      var chart = new google.visualization.OrgChart(
+        document.getElementById('chart_div'),
+      );
 
+      chart.draw(data, { allowHtml: true });
+    }
+  </script>
+  <script>
+    google.charts.load('current', { packages: ['orgchart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Pessoa');
+      data.addColumn('string', 'Cargo');
+      data.addColumn('string', 'Sigla');
 
-        chart.draw(data, { 'allowHtml': true });
-      }
-    </script>
-      <script>
-        google.charts.load('current', { packages: ["orgchart"] });
-        google.charts.setOnLoadCallback(drawChart);
+      data.addRows(orgonograma_dados);
 
-        function drawChart() {
-          var data = new google.visualization.DataTable();
-          data.addColumn('string', 'Pessoa');
-          data.addColumn('string', 'Cargo');
-          data.addColumn('string', 'Sigla');
+      var chart = new google.visualization.OrgChart(
+        document.getElementById('funcionarios'),
+      );
 
-
-          data.addRows(orgonograma_dados);
-
-
-          var chart = new google.visualization.OrgChart(document.getElementById('funcionarios'));
-
-          chart.draw(data, { 'allowHtml': true });
-        }
-      </script>
-
+      chart.draw(data, { allowHtml: true });
+    }
+  </script>
 </head>
+
 <body>
-   
+
+
 </body>
-<script src="Tratamento_csv.js"></script>
+
 </html>
+
+<script src="Tratamento_csv.js"></script>
+<script defer src="funcionarios.js"></script>
